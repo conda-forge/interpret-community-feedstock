@@ -1,5 +1,5 @@
 {% set name = "interpret-community" %}
-{% set version = "0.30.0" %}
+{% set version = "0.31.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/interpret_community-{{ version }}.tar.gz
-  sha256: 092dcff6983bbc61cbc4e2795561f275b333459283cf8d83c218749c6afe78d1
+  sha256: 05a18a573a96c4a02c7e5c560b37a69af0332283ef6608ea53a7e315977db915
 
 build:
   noarch: python
