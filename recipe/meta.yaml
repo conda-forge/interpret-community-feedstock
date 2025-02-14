@@ -1,5 +1,5 @@
 {% set name = "interpret-community" %}
-{% set version = "0.31.0" %}
+{% set version = "0.32.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/interpret_community-{{ version }}.tar.gz
-  sha256: 05a18a573a96c4a02c7e5c560b37a69af0332283ef6608ea53a7e315977db915
+  sha256: 23fc09bc17f23da786927f178f999c221299d89303a8186acdfb7cadc90ab41b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,14 +22,20 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
-    - pandas <2.0.0
+    - pandas
     - scipy
-    - ml-wrappers >=0.5.4,<0.6.dev0
+    - ml-wrappers >=0.6.0,<0.7.dev0
     - scikit-learn
     - packaging
-    - interpret-core >=0.1.20,<=0.5.0
-    - shap >=0.20.0,<=0.44.0
-    - raiutils >=0.4.0,<0.5.dev0
+    - interpret-core >=0.1.20,<=0.6.9
+    - shap >=0.20.0,<=0.46.0
+    - raiutils ~=0.4.0
+    # - tensorflow 
+    # - pyyaml 
+    # - lime >=0.2.0.0
+    # - lightgbm 
+    # - keras 
+    # - hdbscan 
 
 test:
   imports:
