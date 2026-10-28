@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: interpret-community
-  version: "0.32.0"
+  version: 0.33.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/interpret_community-${{ version }}.tar.gz
-  sha256: 23fc09bc17f23da786927f178f999c221299d89303a8186acdfb7cadc90ab41b
+  sha256: 9cc18cad4cf80482f5ee88cd01a441e530a94ee985e632a5ea99b4b5605adcdd
 
 build:
   number: 0
@@ -27,19 +27,12 @@ requirements:
     - numpy
     - pandas
     - scipy
-    - ml-wrappers >=0.6.0,<0.7.dev0
+    - ml-wrappers >=0.6.4,<0.7.dev0
     - scikit-learn
     - packaging
     - interpret-core >=0.1.20,<=0.6.9
     - shap >=0.20.0,<=0.46.0
-    - raiutils ~=0.4.0
-    # - tensorflow
-    # - pyyaml
-    # - lime >=0.2.0.0
-    # - lightgbm
-    # - keras
-    # - hdbscan
-
+    - raiutils >=0.4.0,<0.5.dev0
 tests:
   - python:
       imports:
