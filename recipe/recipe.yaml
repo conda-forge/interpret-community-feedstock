@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: interpret-community
-  version: 0.33.0
+  version: 0.34.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/interpret_community-${{ version }}.tar.gz
-  sha256: 9cc18cad4cf80482f5ee88cd01a441e530a94ee985e632a5ea99b4b5605adcdd
+  sha256: 84b54c4b93368ece10f1a7ce86469db76e22b313c562ebe41bd305fa632cb37e
 
 build:
   number: 0
@@ -31,7 +31,6 @@ requirements:
     - scikit-learn
     - packaging
     - interpret-core >=0.1.20,<=0.6.9
-    - shap >=0.20.0,<=0.46.0
     - raiutils >=0.4.0,<0.5.dev0
 tests:
   - python:
